@@ -24,7 +24,7 @@ jobs:
           version: v1.11.2
           args: release -f ./build/.goreleaser.yml --rm-dist
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GHPAT }}
       - name: Upload assets
         uses: actions/upload-artifact@v3
         with:
